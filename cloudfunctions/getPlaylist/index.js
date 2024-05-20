@@ -8,7 +8,7 @@ const db = cloud.database()
 
 const rp = require('request-promise')
 
-const URL = 'http://musicapi.xiecheng.live/personalized'
+const URL = 'https://www.sovendea.icu/personalized/playlist'
 
 const playlistCollection = db.collection('playlist')
 

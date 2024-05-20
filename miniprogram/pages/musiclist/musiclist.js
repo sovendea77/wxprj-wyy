@@ -24,8 +24,8 @@ Page({
         $url: 'musiclist'
       }
     }).then((res)=>{
-      console.log(res)
       const pl = res.result.playlist
+      console.log(res.result.playlist.tracks)
       this.setData({
         musiclist: pl.tracks,
         coverImgInfo:{

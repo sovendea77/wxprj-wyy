@@ -82,7 +82,7 @@ Page({
     if (!this.data.isSame) {
       backgroundAudioManager.stop()
     }
-
+     
     this.setData({
       picUrl: musicInfo.al.picUrl,
       musicName: musicInfo.name
@@ -91,7 +91,6 @@ Page({
     wx.showLoading({
       title: '歌曲载入中',
     })
-
     wx.cloud.callFunction({
       name: 'music',
       data: {
