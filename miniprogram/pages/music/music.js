@@ -1,5 +1,7 @@
 const MAX_LIMIT = 15  // 歌单每次请求的最大量
 
+const app = getApp()
+
 Page({
 
   /**
@@ -55,6 +57,10 @@ Page({
         $url:'playlist'
       }
     }).then((res) => {
+      console.log(res.result.data.length)
+      if (res.result.data.length==0) {
+          app.getPlaylist()
+      }
       console.log(res.result)
       this.setData({
         playlist: this.data.playlist.concat(res.result.data)
