@@ -21,8 +21,14 @@ exports.main = async (event, context) => {
   // console.log(list)
   var offset = 0
   temp = await offsetCollection.get()
+
   if (temp.data.length != 0) {
+    console.log(offset)
+    if (offset == 1200) {
+      offset = 0
+    }
     offset =  temp.data[0].offset + 50
+   
 }
 
   console.log(offset)
