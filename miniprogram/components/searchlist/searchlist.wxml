@@ -1,0 +1,12 @@
+<!--components/searchlist/searchlist.wxml-->
+<view class="searchlist-container">
+  <block wx:for="{{searchlist}}"  wx:key="index" >
+    <view class="iview" bind:tap='handleSelect' data-musicid='{{item.id}}' data-index='{{index}}'>
+      <view class="iname">{{item.name}}</view>
+      <view class="iintro">
+        <view class="iartist">{{item.artists[0].name}}-</view>
+        <view class="ialbum">{{item.album.name}}</view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,4 @@
+
+<!-- 组件 --- 歌曲条目 -->
+<view>单曲：</view>
+<x-searchlist searchlist='{{songlist}}'/>
