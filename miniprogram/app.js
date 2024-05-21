@@ -14,6 +14,8 @@ App({
         traceUser: true,
       })
     }
+    
+    this.clearStoredList()
 
     this.getPlaylist()  // 首次启动自动调用一次歌单爬取
 
@@ -55,6 +57,10 @@ App({
 
   setResourceType(sign){
     this.globalData.isBtnType = sign
+  },
+  
+  clearStoredList(){
+
   },
 
   // 修复：启动小程序自动加载爬取小程序歌曲数据

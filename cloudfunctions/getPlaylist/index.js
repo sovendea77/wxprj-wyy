@@ -2,10 +2,12 @@ const cloud = require('wx-server-sdk')
 cloud.init()
 const db = cloud.database()
 const rp = require('request-promise')
-const URL = 'https://www.sovendea.icu/top/playlist/highquality'
+
+const URL = 'https://www.sovendea.icu/top/playlist'
 const playlistCollection = db.collection('playlist')
-const lastPlayerlistUpdateTimeCollection = db.collection('updatetime')
+const offsetCollection = db.collection('offset')
 const updateId = '8848'
+
 
 function deDuplication(originList, playList) {
   const existingIds = new Set(originList.map(item => item.id))
@@ -13,10 +15,11 @@ function deDuplication(originList, playList) {
 }
 
 exports.main = async (event, context) => {
+
   // 从数据库获取全部数据
   const list = await playlistCollection.get()
   // console.log(list)
-  var lastPlayerlistUpdateTime = 0
+  var offset = 0
   temp = await lastPlayerlistUpdateTimeCollection.get()
   if (temp.data.length != 0) {
   lastPlayerlistUpdateTime =  temp.data[0].updatetime
@@ -25,15 +28,16 @@ exports.main = async (event, context) => {
   console.log(lastPlayerlistUpdateTime)
 
   // 调用第三方接口获取新的歌单列表
-  let playlist = await rp(URL+"?before="+lastPlayerlistUpdateTime).then(res => JSON.parse(res).playlists)
 
-  lastPlayerlistUpdateTime = playlist[playlist.length-1].updateTime
+  let playlist = await rp(URL+"?offset="+offset).then(res => JSON.parse(res).playlists)
+
+  offset = offset+50
   var newData = {
-    "updatetime":lastPlayerlistUpdateTime,
+    "offset":offset,
   }
 
   try {
-    const result = await lastPlayerlistUpdateTimeCollection.doc(updateId).set({
+    const result = await offsetCollection.doc(updateId).set({
       data: newData
     })
     console.log('更新成功', result)
@@ -41,9 +45,9 @@ exports.main = async (event, context) => {
     console.error('更新失败', err)
   }
 
+
   // 对新的歌单列表进行去重
   let newPlaylist = deDuplication(list.data, playlist)
-
   // 逐条插入新数据
   const insertPromises = newPlaylist.map(item => {
     return playlistCollection.add({

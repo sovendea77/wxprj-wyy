@@ -83,10 +83,17 @@ Page({
       backgroundAudioManager.stop()
     }
      
+    try {
+      this.setData({
+        picUrl: musicInfo.al.picUrl,
+        musicName: musicInfo.name
+      })
+  } catch (error) {
     this.setData({
-      picUrl: musicInfo.al.picUrl,
       musicName: musicInfo.name
     })
+  }
+  
 
     wx.showLoading({
       title: '歌曲载入中',
@@ -113,9 +120,12 @@ Page({
       if (!this.data.isSame) {
         backgroundAudioManager.src = result.data[0].url
         backgroundAudioManager.title = musicInfo.name
-        backgroundAudioManager.coverImgUrl = musicInfo.al.picUrl
-        backgroundAudioManager.singer = musicInfo.ar[0].name
-        backgroundAudioManager.epname = musicInfo.ar.name
+        try{
+          backgroundAudioManager.coverImgUrl = musicInfo.al.picUrl
+          backgroundAudioManager.singer = musicInfo.ar[0].name
+          backgroundAudioManager.epname = musicInfo.ar.name
+        }catch (error){
+        }
 
         this.setData({
           isPlaying: true

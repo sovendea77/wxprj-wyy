@@ -19,6 +19,7 @@ Page({
       }
     ],   // 轮播图
     playlist: [],  // 歌单列表
+    keyword: '' //搜索内容
   },
 
   /**
@@ -49,6 +50,7 @@ Page({
     wx.showLoading({
       title: '歌单加载中...',
     })
+
     wx.cloud.callFunction({
       name: 'music',
       data: {
@@ -68,5 +70,16 @@ Page({
       wx.stopPullDownRefresh();
       wx.hideLoading();
     })
+  },
+
+  goSearch(options){
+    var input = options.detail.keyword
+    if(input===''){
+      return
+    }
+    wx.navigateTo({
+      url: `../../pages/search/search?keyword=${input}`,
+    })
+
   }
 })

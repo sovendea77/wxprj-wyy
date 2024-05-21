@@ -1,9 +1,10 @@
 // 云函数入口文件
 const cloud = require('wx-server-sdk')
 
+const rp = require('request-promise')
+
 const TcbRouter = require('tcb-router')
 
-const rp = require('request-promise')
 
 const BASE_URL = 'https://www.sovendea.icu'
 
@@ -15,6 +16,14 @@ const db = cloud.database()
 exports.main = async(event, context) => {
   const app = new TcbRouter({
     event
+  })
+
+  app.router('search', async(ctx, next) => {
+    console.log(parseInt(event.keyword))
+    ctx.body = await rp(BASE_URL + '/search?keywords=' + encodeURI(event.keyword))
+      .then((res) => {
+        return JSON.parse(res)
+      })
   })
 
   app.router('playlist', async(ctx, next) => {

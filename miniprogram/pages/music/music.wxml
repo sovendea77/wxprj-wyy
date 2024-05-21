@@ -1,3 +1,14 @@
+<!-- 搜索栏 -->
+<view class="search-container">
+    <view class="search-header">
+      <view class="search" >
+        <x-search 
+        bind:search="goSearch"
+        bind:confirmSearch="goSearch"
+         />
+      </view>
+    </view>
+</view>
 <!-- 音乐模块--首页轮播图 -->
 <swiper 
     indicator-dots="true"
@@ -12,7 +23,6 @@
     </swiper-item>
   </block>
 </swiper>
-
 <!-- 歌单列表 -->
 <view class="playlist-container">
   <block wx:for="{{playlist}}"  wx:key="_id">
