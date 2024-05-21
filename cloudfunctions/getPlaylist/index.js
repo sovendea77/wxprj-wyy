@@ -20,18 +20,17 @@ exports.main = async (event, context) => {
   const list = await playlistCollection.get()
   // console.log(list)
   var offset = 0
-  temp = await lastPlayerlistUpdateTimeCollection.get()
+  temp = await offsetCollection.get()
   if (temp.data.length != 0) {
-  lastPlayerlistUpdateTime =  temp.data[0].updatetime
+    offset =  temp.data[0].offset + 50
 }
 
-  console.log(lastPlayerlistUpdateTime)
+  console.log(offset)
 
   // 调用第三方接口获取新的歌单列表
 
   let playlist = await rp(URL+"?offset="+offset).then(res => JSON.parse(res).playlists)
 
-  offset = offset+50
   var newData = {
     "offset":offset,
   }
