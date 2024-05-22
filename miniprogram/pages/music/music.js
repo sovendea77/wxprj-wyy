@@ -1,21 +1,13 @@
 const MAX_LIMIT = 15  // 歌单每次请求的最大量
 
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    swiperImgUrls: [{
-        url: 'http://p1.music.126.net/oeH9rlBAj3UNkhOmfog8Hw==/109951164169407335.jpg',
-      },
-      {
-        url: 'http://p1.music.126.net/xhWAaHI-SIYP8ZMzL9NOqg==/109951164167032995.jpg',
-      },
-      {
-        url: 'http://p1.music.126.net/Yo-FjrJTQ9clkDkuUCTtUg==/109951164169441928.jpg',
-      }
-    ],   // 轮播图
     playlist: [],  // 歌单列表
     keyword: '', //搜索内容
     selectArray: [{
@@ -51,10 +43,8 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作--下拉重新请求
    */
   onPullDownRefresh: function() {
-    this.setData({
-      playlist: []
-    })
     this._getplaylist();
+   
   },
 
   /**
@@ -78,6 +68,12 @@ Page({
         $url:'playlist'
       }
     }).then((res) => {
+      console.log(res.result.data.length)
+
+      if (res.result.data.length==0) {
+      console.log("hello")
+          app.getPlaylist()
+      }
       console.log(res.result)
       this.setData({
         playlist: this.data.playlist.concat(res.result.data)

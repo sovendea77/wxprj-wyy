@@ -6,6 +6,9 @@ page{
   bottom: 0;
   background-size: cover;
   background-image: url(https://hbimg.huabanimg.com/fad309d23ac6127df6223bfab809e59eecdb6074a80e2-9syrxq_fw658);
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .mask{
