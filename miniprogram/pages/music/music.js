@@ -32,10 +32,13 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作--下拉重新请求
    */
   onPullDownRefresh: function() {
-    this.setData({
-      playlist: []
-    })
+    // this.setData({
+    //   playlist: []
+    // })
+    console.log(this.data.playlist.length)
+    console.log(this.data.playlist)
     this._getplaylist();
+   
   },
 
   /**
@@ -60,7 +63,9 @@ Page({
       }
     }).then((res) => {
       console.log(res.result.data.length)
+
       if (res.result.data.length==0) {
+      console.log("hello")
           app.getPlaylist()
       }
       console.log(res.result)
