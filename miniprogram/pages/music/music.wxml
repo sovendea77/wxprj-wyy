@@ -10,6 +10,24 @@
     </view>
 </view>
 
+
+<view class="card-theme">
+  <t-swiper
+    display-multiple-items="2"
+    current="{{current}}"
+    autoplay="{{autoplay}}"
+    duration="{{duration}}"
+    interval="{{interval}}"
+    bind:change="onChange"
+    bind:click="onTap"
+    list="{{swiperList}}"
+    image-props="{{ { shape: 'round' } }}"
+    t-class-nav="card-theme-nav"
+  />
+</view>
+
+
+
 <!-- 歌单列表 -->
 <view class="playlist-container">
   <block wx:for="{{playlist}}"  wx:key="_id">

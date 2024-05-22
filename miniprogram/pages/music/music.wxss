@@ -2,8 +2,8 @@
   display:  flex;
   flex-wrap: wrap;
   justify-content:  space-around;
-  margin-top: 70rpx;
   flex-direction: row;
+  margin-top: 15px;
 }
 .swiperImg{
   width: 100%;
@@ -33,4 +33,43 @@
 
 .search {
   flex: 1;
+}
+
+.card-theme {
+  --td-swiper-radius: 0;
+  --td-swiper-item-padding: 0 12rpx;
+  --td-swiper-nav-dot-color: var(--td-bg-color-component, #e7e7e7);
+  --td-swiper-nav-dot-active-color: var(--td-brand-color, #0052d9);
+
+  padding-bottom: 18px;
+}
+
+.card-theme .card-theme-nav {
+  bottom: -18px;
+}
+
+.scale-candidate {
+  height: 126px !important;
+}
+
+.t-swiper {
+  margin-top: 60px;
+}
+
+.card-theme {
+  --td-swiper-radius: 0;
+  --td-swiper-item-padding: 0 12rpx;
+  --td-swiper-nav-dot-color: var(--td-bg-color-component, #e7e7e7);
+  --td-swiper-nav-dot-active-color: var(--td-brand-color, #0052d9);
+  --td-swiper-nav-dot-size: 0;
+
+  padding-bottom: 0px;
+}
+
+.card-theme .card-theme-nav {
+  bottom: -18px;
+}
+
+.scale-candidate {
+  height: 126px !important;
 }

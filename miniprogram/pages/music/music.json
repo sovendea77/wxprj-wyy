@@ -2,7 +2,8 @@
   "usingComponents": {
     "x-playlist": "/components/playlist/playlist",
     "x-global-music": "/components/global-music/global-music",
-    "x-search": "/components/search/search"
+    "x-search": "/components/search/search",
+    "t-swiper": "tdesign-miniprogram/swiper/swiper"
   },
   "enablePullDownRefresh": true
 }
