@@ -4,6 +4,7 @@ Page({
    */
   data: {
     keyword: '',
+    type: 1,
     songlist: [] // 歌曲
   },
 
@@ -23,6 +24,7 @@ Page({
       name: 'music',
       data:{
         keyword: options.keyword,
+        type:options.type,
         $url: 'search'
       }
     }).then((res)=>{

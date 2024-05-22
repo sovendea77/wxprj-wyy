@@ -1,0 +1,9 @@
+<view class='content-box'>
+    <view class='content' bindtap='selectToggle'>
+        <view class='text'>{{selectText}}</view>
+         <view class="{{selectShow ? 'icon-up' : 'icon-down'}}"></view>
+    </view>
+    <view class='options' wx:if="{{selectShow}}">
+        <view wx:for="{{selectArray}}" data-index="{{index}}" wx:key='index' class='option' bindtap='setText'>{{item.text}}</view>
+    </view>
+</view>

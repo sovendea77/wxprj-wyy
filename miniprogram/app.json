@@ -13,7 +13,8 @@
     "pages/profile-develop/profile-develop",
     "pages/profile-luckdraw/profile-luckdraw",
     "pages/search/search",
-    "components/searchlist/searchlist"
+    "components/searchlist/searchlist",
+    "components/combobox/combobox"
   ],
   "requiredBackgroundModes": [
     "audio",

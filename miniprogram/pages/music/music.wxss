@@ -32,5 +32,10 @@
 }
 
 .search {
+  display: flex;
   flex: 1;
+}
+
+x-search{
+  width: 100%;
 }

@@ -1,0 +1,89 @@
+
+.content-box {
+  width: 160rpx;
+  
+}
+
+.content {
+  background: white;
+  font-size: 28rpx;
+  position: relative;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #f5f5f5;
+  border-radius: 34rpx;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0rpx 20rpx 0 13rpx;
+  font-size: 28rpx;
+}
+
+.options {
+  border-radius: 20rpx;
+  background: white;
+  width: inherit;
+  position: absolute;
+  border: 2rpx solid #e2e2e2;
+  border-top: none;
+  box-sizing: border-box;
+  z-index: 3;
+  max-height: 200rpx;
+  overflow: auto;
+}
+
+.option {
+  height: 60rpx;
+  line-height: 60rpx;
+  border-top: 1px solid #e2e2e2;
+  padding: 0 10rpx;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 28rpx;
+}
+
+.item:first-child {
+  border-top: none;
+}
+
+.icon-right, .icon-down, .icon-up {
+  display: inline-block;
+  padding-right: 13rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 7rpx;
+}
+
+.icon-right::after, .icon-down::after, .icon-up::after {
+  content: "";
+  display: inline-block;
+  position: relative;
+  bottom: 2rpx;
+  margin-left: 10rpx;
+  height: 15rpx;
+  width: 15rpx;
+  border: solid #999;
+  border-width: 5rpx 5rpx 0 0;
+}
+
+.icon-right::after {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.icon-down::after {
+  bottom: 12rpx;
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.icon-up::after {
+  bottom: 2rpx;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}

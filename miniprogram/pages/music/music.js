@@ -17,9 +17,30 @@ Page({
       }
     ],   // 轮播图
     playlist: [],  // 歌单列表
-    keyword: '' //搜索内容
+    keyword: '', //搜索内容
+    selectArray: [{
+        "id": "1",
+        "text": "按歌曲"
+      }, 
+      {
+        "id": "1",
+        "text": "按歌手"
+      },
+      {
+        "id": "1006",
+        "text": "按歌词"
+      }],
+      selectType: 1
   },
 
+  select: function(e) {
+
+    this.setData(
+      {
+        selectType:parseInt(e.detail.id)
+      }
+    )
+  },
   /**
    * 生命周期函数--监听页面加载--首次加载获取第一页歌单列表
    */
@@ -72,7 +93,7 @@ Page({
       return
     }
     wx.navigateTo({
-      url: `../../pages/search/search?keyword=${input}`,
+      url: `../../pages/search/search?keyword=${input}&type=${this.data.selectType}`,
     })
 
   }
