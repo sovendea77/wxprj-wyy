@@ -32,11 +32,6 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作--下拉重新请求
    */
   onPullDownRefresh: function() {
-    // this.setData({
-    //   playlist: []
-    // })
-    console.log(this.data.playlist.length)
-    console.log(this.data.playlist)
     this._getplaylist();
    
   },
