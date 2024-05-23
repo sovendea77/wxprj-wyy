@@ -27,7 +27,11 @@ exports.main = async(event, context) => {
   })
 
   app.router('playlist', async(ctx, next) => {
-    ctx.body = await db.collection('playlist')
+    var list = 'playlist'
+    if (event.type == 'rec') {
+      list = 'topplaylist'
+    }
+    ctx.body = await db.collection(list)
       .skip(event.start)
       .limit(event.count)
       .orderBy('trackNumberUpdateTime', 'desc')

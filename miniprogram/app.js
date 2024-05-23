@@ -17,8 +17,6 @@ App({
     
     this.clearStoredList()
 
-    this.getPlaylist()  // 首次启动自动调用一次歌单爬取
-
     this.getOpenid()   // 获取用户openid
 
     this.checkUpdate() // 检测版本更新
@@ -64,9 +62,12 @@ App({
   },
 
   // 修复：启动小程序自动加载爬取小程序歌曲数据
-  getPlaylist(){
+  getPlaylist(params){
     wx.cloud.callFunction({
-      name: "getPlaylist"
+      name: "getPlaylist",
+      data: {
+          type:params
+      }
     }).then((res) => {
       console.log("新增歌单：",res.result)
     })

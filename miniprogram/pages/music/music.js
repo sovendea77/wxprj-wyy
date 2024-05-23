@@ -1,5 +1,4 @@
 const MAX_LIMIT = 15 // 歌单每次请求的最大量
-
 const app = getApp()
 
 Page({
@@ -9,6 +8,7 @@ Page({
    */
   data: {
     playlist: [],  // 歌单列表
+    topplaylist: [], //推荐歌单列表
     keyword: '', //搜索内容
     selectArray: [{
         "id": "1",
@@ -32,16 +32,12 @@ Page({
 
   onTap(e) {
     const { index } = e.detail;
-    console.log(this.data.playlist[index])
+    console.log(this.data.topplaylist[index])
     wx.navigateTo({
-      url: `../../pages/musiclist/musiclist?playlistId=${this.data.playlist[index].id}`,
+      url: `../../pages/musiclist/musiclist?playlistId=${this.data.topplaylist[index].id}`,
     })
   },
-  onChange(e) {
-    const { current, source } = e.detail;
-    console.log(this.data.playlist)
-    console.log(current, source);
-  },
+
 
   select: function(e) {
 
@@ -55,25 +51,28 @@ Page({
    * 生命周期函数--监听页面加载--首次加载获取第一页歌单列表
    */
   onLoad: function (options) {
-    this._getplaylist();
+    this._getplaylist('high');
+    this._getplaylist('rec');
   },
   /**
    * 页面相关事件处理函数--监听用户下拉动作--下拉重新请求
    */
   onPullDownRefresh: function () {
-    this._getplaylist();
-
+    // app.getPlaylist('high')
+    // app.getPlaylist('rec')
+    this._getplaylist('high')
+    this._getplaylist('rec')
   },
 
   /**
    * 页面上拉触底事件的处理函数--加载更多歌单
    */
   onReachBottom: function () {
-    this._getplaylist();
+    this._getplaylist('high')
   },
 
   // 向云服务请求获取歌单列表
-  _getplaylist() {
+  _getplaylist(param) {
     wx.showLoading({
       title: '歌单加载中...',
     })
@@ -83,28 +82,32 @@ Page({
       data: {
         start: this.data.playlist.length,
         count: MAX_LIMIT,
-        $url: 'playlist'
+        $url: 'playlist',
+        type: param
       }
     }).then((res) => {
       console.log(res.result.data.length)
 
       if (res.result.data.length == 0) {
-        console.log("hello")
-        app.getPlaylist()
+        app.getPlaylist(param)
       }
-      console.log(res.result)
-      const newSwiperList = res.result.data.map(item => item.coverImgUrl);
-      this.setData({
-        playlist: this.data.playlist.concat(res.result.data),
-        swiperList: this.data.swiperList.concat(newSwiperList)
-      })
+
+      if (param == 'rec') {
+        console.log(res.result)
+        const newSwiperList = res.result.data.map(item => item.picUrl);
+        this.setData({
+          topplaylist: this.data.topplaylist.concat(res.result.data),
+          swiperList: this.data.swiperList.concat(newSwiperList)
+        })
+      } else {
+        this.setData({
+          playlist: this.data.playlist.concat(res.result.data),
+        })
+      }
+
       wx.stopPullDownRefresh();
       wx.hideLoading();
     })
-  },
-
-  _get_top_playlist() {
-    
   },
 
   goSearch(options) {
