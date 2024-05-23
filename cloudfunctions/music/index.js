@@ -20,7 +20,7 @@ exports.main = async(event, context) => {
 
   app.router('search', async(ctx, next) => {
     console.log(parseInt(event.keyword))
-    ctx.body = await rp(BASE_URL + '/search?keywords=' + encodeURI(event.keyword))
+    ctx.body = await rp(BASE_URL + '/cloudsearch?keywords=' + encodeURI(event.keyword)+'&type='+event.type)
       .then((res) => {
         return JSON.parse(res)
       })

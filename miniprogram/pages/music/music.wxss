@@ -32,9 +32,14 @@
 }
 
 .search {
+  display: flex;
   flex: 1;
 }
 
+x-search{
+  width: 100%;
+
+}
 .card-theme {
   --td-swiper-radius: 0;
   --td-swiper-item-padding: 0 12rpx;

@@ -16,9 +16,12 @@
 }
 
 .iartist,
-.ialbum {
+.ialbum, .ilyric {
   font-size: 10px;
   color: #666;
+}
+.ilyric{
+  margin-left: 50rpx;
 }
 
 .iartist {
