@@ -4,8 +4,9 @@
     <view class="iview" bind:tap='handleSelect' data-musicid='{{item.id}}' data-index='{{index}}'>
       <view class="iname">{{item.name}}</view>
       <view class="iintro">
-        <view class="iartist">{{item.artists[0].name}}-</view>
-        <view class="ialbum">{{item.album.name}}</view>
+        <view class="iartist">{{item.ar[0].name}}-</view>
+        <view class="ialbum">{{item.al.name}} </view>
+        <rich-text wx:if="{{item.lyrics[0]}}" class="ilyric" nodes="{{item.lyrics[0]}}"></rich-text>
       </view>
     </view>
   </block>

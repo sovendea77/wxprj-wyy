@@ -2,10 +2,8 @@
 <view class="search-container">
     <view class="search-header">
       <view class="search" >
-        <x-search 
-        bind:search="goSearch"
-        bind:confirmSearch="goSearch"
-         />
+        <x-combobox selectArray='{{selectArray}}'  bind:select='select' />
+        <x-search bind:search="goSearch" bind:confirmSearch="goSearch"/>
       </view>
     </view>
 </view>

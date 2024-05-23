@@ -3,6 +3,7 @@
     "x-playlist": "/components/playlist/playlist",
     "x-global-music": "/components/global-music/global-music",
     "x-search": "/components/search/search",
+    "x-combobox": "/components/combobox/combobox",
     "t-swiper": "tdesign-miniprogram/swiper/swiper"
   },
   "enablePullDownRefresh": true
