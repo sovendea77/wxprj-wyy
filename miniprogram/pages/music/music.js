@@ -94,7 +94,7 @@ Page({
 
       if (param == 'rec') {
         console.log(res.result)
-        const newSwiperList = res.result.data.map(item => item.picUrl);
+        const newSwiperList = res.result.data.map(item => item.coverImgUrl);
         this.setData({
           topplaylist: this.data.topplaylist.concat(res.result.data),
           swiperList: this.data.swiperList.concat(newSwiperList)
