@@ -222,6 +222,7 @@ Page({
     this.setData({
       isLyricShow: !this.data.isLyricShow
     })
+    console.log("click")
   },
 
   // 重新载入歌曲获取总时间 -- 修复BUG

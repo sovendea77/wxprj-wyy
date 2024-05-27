@@ -14,7 +14,8 @@ App({
         traceUser: true,
       })
     }
-    
+    this.getPlaylist("high")
+
     this.clearStoredList()
 
     this.getOpenid()   // 获取用户openid
