@@ -184,6 +184,15 @@ Page({
     }
   },
 
+  //写博客
+  goBlog(){
+    
+    wx.navigateTo({
+      url: '../blog-edit/blog-edit'
+    })
+    console.log("click")
+  },
+
   // 点击播放按钮切换播放和暂停 
   togglePlaying() {
     console.log("xxx",this.data.isPlaying)
@@ -267,7 +276,7 @@ Page({
 
     if (this.data.selected) {
       wx.showToast({
-        title: '添加到我的喜爱',
+        title: '喜欢了这首歌',
         image: '../../images/show-success.png',
         duration: 2000
       })

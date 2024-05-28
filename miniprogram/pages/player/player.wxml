@@ -22,14 +22,14 @@
       <i class="iconfont icon-dianzan {{selected ? 'love' : ''}}" bind:tap="onSelect"></i>
     </view>
     <view class="select-box">
-      <i class="iconfont icon-pinglun"></i>
+      <i style="color: #ffffff; font-size: 80rpx;" class="iconfont icon-xieboke" bind:tap="goBlog"></i>
     </view>
     <button class="select-box share-box" 
       open-type="share" 
       data-shareimg="{{ picUrl }}"
       data-musicname="{{musicName}}"
     >
-      <i class="iconfont icon-fenxiang"></i>
+      <i class="iconfont icon-fenxiang" ></i>
     </button>
     <view class="select-box">
       <i class="iconfont icon-gengduo"></i>
