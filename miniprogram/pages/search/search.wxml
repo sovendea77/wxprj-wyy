@@ -1,4 +1,13 @@
 
 <!-- 组件 --- 歌曲条目 -->
-<view>单曲：</view>
+<view class="title-container">
+  <view class="title-img">
+  <image style="height: 81rpx; width: 105rpx;" src="../../images/search-logo.png"></image>
+  </view>
+  <view class="ellipse">
+    <view class="title-text">
+    单曲结果：
+    </view>
+  </view>
+</view>
 <x-searchlist searchlist='{{songlist}}'/>

@@ -1,27 +1,79 @@
+@import "../../iconfont.wxss";
+
 .searchlist-container {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+.musicpic-container{
+  width: 0rpx;
+  height: 30rpx;
+  left: 0rpx;
+  display: flex;
+  margin-bottom: 60rpx;
+}
+.box{
+  width: 90rpx; 
+  height: 90rpx; 
+  border-radius: 20%; 
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+}
+.musicpic{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+}
+.icontent{
+  position: relative;
+  left: 100rpx;
+  flex-grow: 1;
+  width: 0;
+}
 
 .iname {
-  font-size: 14px; 
+  font-size: 15px; 
   font-weight: bold; 
   margin-bottom: 5px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  width: 450rpx;
 }
 
 .iintro {
   display: flex; 
   flex-direction: row; 
+  width: 500rpx;
 }
 
 .iartist,
-.ialbum, .ilyric {
-  font-size: 10px;
+.ialbum{
+  font-size: 12px;
   color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 50rpx;
+}
+
+.ilyric-container{
+  position: relative;
+  bottom: 40rpx;
 }
 .ilyric{
-  margin-left: 50rpx;
+  font-size: 12px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
+  margin-bottom: 50rpx;
 }
 
 .iartist {
@@ -29,10 +81,13 @@
 }
 
 .iview {
+  margin: 20rpx;
+  width: 90%;
   padding: 9px; 
   border-bottom: 1px solid #ddd;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  margin-bottom: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); 
   background-color: #fff; 
-  border-radius: 5px; 
+  border-radius: 20rpx; 
+  display: flex;
+  flex-direction: row;
 }
