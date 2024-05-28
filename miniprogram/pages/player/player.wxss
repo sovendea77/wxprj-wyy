@@ -64,8 +64,8 @@
 .player-dis{
   transform: skew(1deg, -2deg);
   position: absolute;
-  top: 497rpx;
-  left: 247rpx;
+  top: 500rpx;
+  left: 241rpx;
   right: 100rpx;
   bottom: 100rpx;
 

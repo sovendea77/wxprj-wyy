@@ -1,5 +1,13 @@
 <block wx:for='{{musiclist}}' wx:key="id">
   <view class="musiclist-container" bind:tap='handleSelect' data-musicid='{{item.id}}' data-index='{{index}}'>
+    <view class="info-background">
+        <view class="backimage" style="opacity: 0.2; filter: blur(5rpx);background-color: aqua;"></view>
+    </view>
+    <view class="musicpic-container">
+      <view class="box">
+        <image class="musicpic" src="{{item.al.picUrl}}"></image>
+      </view>
+    </view>
     <view class="musiclist-index" style="color: {{item.id == playerId? playingColor : indexColor }}">{{index+1}}</view>
     <view class="musiclist-info">
       <view class="musiclist-name" style="color: {{item.id == playerId? playingColor : musicColor }}">

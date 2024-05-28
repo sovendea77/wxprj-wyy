@@ -1,8 +1,43 @@
 .musiclist-container {
+  height: 100rpx;
   display: flex;
   padding: 14rpx 20rpx;
   align-items: center;
   border-bottom: 1rpx solid #eee;
+}
+.info-background{
+  height: 30rpx;
+  position: absolute;
+  left: 80rpx;
+  display: flex;
+  margin-bottom: 60rpx;
+  
+}
+.musicpic-container{
+  width: 0rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 90rpx;
+  display: flex;
+  margin-bottom: 60rpx;
+  
+}
+.box{
+  width: 90rpx; 
+  height: 90rpx; 
+  border-radius: 20%; 
+  overflow: hidden; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute; 
+  box-shadow: 0 0 10rpx rgb(0, 0, 0);
+}
+.musicpic{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  
 }
 
 .musiclist-index {
@@ -13,12 +48,16 @@
 .musiclist-info {
   flex-grow: 1;
   width: 0;
+  position: relative;
+  left: 100rpx;
 }
 
 .musiclist-name, .musiclist-singer {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  position: relative;
+  width: 80%;
 }
 
 .musiclist-name {
