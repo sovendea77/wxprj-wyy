@@ -86,15 +86,15 @@ Page({
         type: param
       }
     }).then((res) => {
-      console.log(res.result.data)
-      console.log(param)
+      console.log(res.result.data[0] == null)
 
       if (res.result.data.length == 0) {
         app.getPlaylist(param)
       }
 
       if (param == 'rec') {
-        const newSwiperList = res.result.data.map(item => item.coverImgUrl);
+        console.log(res.result)
+        const newSwiperList = res.result.data.map(item => item.picUrl);
         this.setData({
           topplaylist: this.data.topplaylist.concat(res.result.data),
           swiperList: this.data.swiperList.concat(newSwiperList)

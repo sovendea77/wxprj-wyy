@@ -43,27 +43,29 @@ page {
   border-radius: 50%;
   margin-right: 20rpx;
   margin-top: 2rpx;
-  border: 1px solid rgba(216, 30, 6, 0.4);
+  border: 1px solid rgba(34, 153, 97, 0.4);
 }
 
 .blog-love {
   position: absolute;
   display: flex;
   align-items: center;
-  top: 50%;
+  top: 10%;
   right: 10rpx;
   transform: translateY(-50%);
+  width: 10rpx;
 }
 
 .icon-dianzan {
   position: absolute;
-  right: 90rpx;
+  right: 50rpx;
   font-size: 54rpx;
   opacity: 0.7;
+  width: 10rpx;
 }
 
 .love {
-  color: #d81e06;
+  color: #15966b;
   opacity: 1;
   animation-duration: 1s;
   animation-name: lovesize;
@@ -98,7 +100,7 @@ page {
   border-radius: 20rpx;
   padding: 2rpx 8rpx;
   background: #e7e7e79a;
-  color: rgba(216, 31, 6);
+  color: rgb(22, 92, 53);
   margin-left: 10rpx;
   margin-top: 8rpx;
 }

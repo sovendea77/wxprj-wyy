@@ -34,7 +34,6 @@
 }
 
 .lyric-playing {
-  color: #fcfcfc;
-  font-weight: bold;
-  font-size: large;
+  color: #d81e06;
+  font-weight: 500;
 }

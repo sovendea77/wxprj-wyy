@@ -2,7 +2,7 @@
   font-size: 32rpx;
   height: 80rpx;
   text-align: center;
-  background: #d81e06;
+  background: #15966b;
   color: #fff;
   margin: 120rpx;
 }

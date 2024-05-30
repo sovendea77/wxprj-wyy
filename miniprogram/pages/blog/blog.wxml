@@ -1,17 +1,36 @@
-<view class="container">
+<view>
+	<!--pics文件夹下的background.jpg文件-->
+	<image class='background' src="../../images/background.jpg" mode="aspectFill"></image>
+	<!--页面其它部分-->
+</view>
+<view>
+<swiper >
+	<swiper-item>
+		<image src="../../images/lunbotu1.png" style="width:100%;height:230px;" />
+	</swiper-item>
+	<swiper-item >
+		<image src="../../images/lunbotu2.jpg" style="width:100%;height:230px;" />
+	</swiper-item>
+	<swiper-item>
+		<image src="../../images/lunbotu3.jpg" style="width:100%;height:230px;" />
+	</swiper-item>
+</swiper>
+</view>
+<view>
     <!-- 博客头部  -->
     <view class="blog-header">
-      <view class="blog-publish" bindtap="onPublish">
-        <i class="iconfont icon-fabu"></i>
-      </view>
       <view class="blog-search" >
         <x-search 
         bind:search="goSearch"
         bind:confirmSearch="goSearch"
          />
       </view>
+      <view class="blog-publish" bindtap="onPublish">
+      <text class="nav">快发表你的音乐笔记吧</text>
+        <i class="iconfont icon-fabu"></i>
+      </view>
     </view>
-</view>
+  </view>
 
 <!-- 无数据时提示  -->
   <view class="blog-empty" wx:if="{{!blogList.length}}">
@@ -24,7 +43,7 @@
 
     <!-- 博客列表 -->
     <view class="blog-list">
-      <block wx:for="{{blogList}}" wx:key="_id">
+      <block  wx:for="{{blogList}}" wx:key="_id">
         <view class="blog-panel">
           <x-blog-card 
             blog="{{item}}"

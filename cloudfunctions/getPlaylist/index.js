@@ -62,10 +62,10 @@ exports.main = async (event, context) => {
 
   // 调用第三方接口获取新的歌单列表
   let playlist = await rp(URL+"/top/playlist"+"?offset="+offset).then(res => JSON.parse(res).playlists)
-
+  console.log(playlist)
   // 对新的歌单列表进行去重
   let newPlaylist = deDuplication(list.data, playlist)
-
+  console.log(newPlaylist)
   updatenum = newPlaylist.length
 
   var newData = {
@@ -82,5 +82,5 @@ exports.main = async (event, context) => {
   }
 
   insertNewPlaylists(playlistCollection,newPlaylist)
-  return updatenum
+  return newPlaylist.length
 }

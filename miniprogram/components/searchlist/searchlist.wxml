@@ -2,23 +2,12 @@
 <view class="searchlist-container">
   <block wx:for="{{searchlist}}"  wx:key="index" >
     <view class="iview" bind:tap='handleSelect' data-musicid='{{item.id}}' data-index='{{index}}'>
-      <view class="musicpic-container">
-        <view class="box">
-          <image class="musicpic" src="{{item.al.picUrl}}"></image>
-        </view>
+      <view class="iname">{{item.name}}</view>
+      <view class="iintro">
+        <view class="iartist">{{item.ar[0].name}}-</view>
+        <view class="ialbum">{{item.al.name}} </view>
+        <rich-text wx:if="{{item.lyrics[0]}}" class="ilyric" nodes="{{item.lyrics[0]}}"></rich-text>
       </view>
-      <view class="icontent">
-        <view class="iname">{{item.name}}</view>
-        <view class="iintro">
-          <view class="iartist">{{item.ar[0].name}}-</view>
-          <view class="ialbum">{{item.al.name}} </view>
-        </view>
-        <view class="ilyric-container">
-          <rich-text wx:if="{{item.lyrics[0]}}" class="ilyric" nodes="{{item.lyrics[0]}}"></rich-text>
-        </view>
-      </view>
-
-      <text style="font-size: 60rpx; position: absolute; right: 80rpx; " class="iconfont icon-bofang" ></text>
     </view>
   </block>
 </view>

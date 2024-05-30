@@ -5,6 +5,7 @@
   height: 80rpx;
   border-top: 1px solid #f0f0f0;
   border-radius: 0 0 20rpx 20rpx;
+  
 }
 
 .ctrl-item {
@@ -13,7 +14,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #2e2e2e;
+  color:#164d3a;
   font-family: Arial,
                  "PingFang SC",
                  "Hiragino Sans GB",
@@ -34,11 +35,11 @@
 }
 
 .share {
-  color: #d81f06cc;
+  color: #15966b;
 }
 
 .share-btn {
-  color: #d81f06cc;
+  color: #15966b;
   border: none;
   background-color: transparent;
   outline: none;
@@ -56,14 +57,14 @@
   margin-bottom: 20rpx;
   border-radius: 30rpx;
   padding: 30rpx;
-  caret-color: rgb(216, 30, 6, 0.6);
+  caret-color: rgba(26, 145, 99, 0.6);
 }
 
 .send-btn {
   position: absolute;
   right: 4rpx;
   bottom: 20rpx;
-  background: #d81e06;
+  background: #15966b;
   color: #fff;
   font-size: 24rpx;
   margin-right: 20rpx;
