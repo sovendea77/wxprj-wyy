@@ -111,7 +111,7 @@ page {
 }
 
 .support {
-  color: #d81e06;
+  color: #15966b;
   opacity: 1;
   animation-duration: 1s;
   animation-name: support;
