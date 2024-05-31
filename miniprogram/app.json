@@ -22,7 +22,7 @@
   ],
   "tabBar": {
     "color": "#515151",
-    "selectedColor": "#d81e06",
+    "selectedColor": "#15966b",
     "list": [
       {
         "pagePath": "pages/music/music",
