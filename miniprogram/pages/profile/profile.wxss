@@ -1,7 +1,16 @@
 page {
-  background: #f1f1f1;
+  background: #edf4ed;
 }
 
+.ellipse{
+  height: 420rpx; 
+  border-radius:0 0 20% 20%; 
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  box-shadow: 0 0 20rpx rgb(0, 0, 0);
+  background-image: url(https://hbimg.huabanimg.com/ad44374f29e0a2f45748fbcda3f1f761a5c1610e28d0e-3dtmRE_fw658);
+}
 /* 我的主页封面 */
 
 .profile-header {
@@ -10,7 +19,6 @@ page {
   align-items: center;
   flex-direction: column;
   height: 480rpx;
-  box-shadow: 0 2rpx 2rpx 3rpx rgba(0, 0, 0, 0.1);
   color: #fff;
   background-size: cover;
   font-family: Arial,
@@ -20,14 +28,13 @@ page {
                  "Microsoft YaHei",
                  "WenQuanYi Micro Hei",
                  sans-serif;
-  background-image: url(https://hbimg.huabanimg.com/ad44374f29e0a2f45748fbcda3f1f761a5c1610e28d0e-3dtmRE_fw658);
 }
 
 .avatar-url {
   overflow: hidden;
   width: 200rpx;
   height: 200rpx;
-  border: 6rpx solid #d81e06;
+  border: 6rpx solid #15966b;
   border-radius: 50%;
 }
 
@@ -35,8 +42,7 @@ page {
   margin-top: 14rpx;
   font-size: 36rpx;
 }
-
-.replace-theme, .head-frame {
+.head-frame {
   position: absolute;
   display: flex;
   align-items: center;
@@ -50,16 +56,8 @@ page {
   box-sizing: border-box;
 }
 
-.icon-pifu, .icon-touxiang {
-  font-size: 24rpx;
-}
-
-.replace-theme {
-  top: 30rpx;
-}
-
 .head-frame {
-  top: 100rpx;
+  top: 30rpx;
 }
 
 .theme-text {
@@ -90,11 +88,16 @@ page {
 /* 我的主页导航栏 */
 
 .profile-nav {
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: 100%;
   padding: 68rpx;
-  background: #fff;
+  margin-top: 50rpx;
+  background: rgb(255, 255, 255);
   box-sizing: border-box;
+  border-radius: 50rpx;
+  box-shadow: 0 0 10rpx rgb(87, 87, 87);
 }
 
 .nav-item {
@@ -105,27 +108,47 @@ page {
   border-radius: 6rpx;
   background: #fff;
   color: #383838;
-  margin-bottom: 8rpx;
+  margin-bottom: 58rpx;
+  margin-left: 50rpx;
   border-bottom: 1rpx solid #f3f3f3;
 }
-
-.nav-item:nth-child(5) {
-  margin-bottom: 60rpx;
+.profile-nav2 {
+  margin-top: 50rpx;
+  width: 100%;
+  height: 100%;
+  padding: 68rpx;
+  background: #d9eed9;
+  box-sizing: border-box;
+  border-radius: 50rpx;
+  box-shadow: 0 0 10rpx rgb(197, 197, 197);
 }
 
-.nav-item:nth-child(5), .nav-item:last-child {
-  border-bottom: none;
-  font-size: 36rpx;
+.nav-item2 {
+  position: relative;
+  width: 100%;
+  height: 72rpx;
+  line-height: 72rpx;
+  border-radius: 6rpx;
+  background: #d9eed9;
+  color: #383838;
+  margin-bottom: 8rpx;
+  border-bottom: 1rpx solid rgb(91, 158, 74);
+  border-radius: 20%;
 }
 
 .icon-nav {
-  font-size: 38rpx;
+  font-size: 88rpx;
   margin-left: 8rpx;
-  color: #d81e06;
+  color: #15966b;
+}
+.icon-nav2 {
+  font-size: 48rpx;
+  margin-left: 8rpx;
+  color: #15966b;
 }
 
 .icon-xihuan{
-  font-size: 42rpx;
+  font-size: 100rpx;
   margin-left: 4rpx;
 }
 
@@ -136,8 +159,11 @@ page {
 }
 
 .text {
+  width: 100%;
+  text-align: center;
   position: absolute;
-  left: 68rpx;
+  margin-top: 100rpx;
+  right: 30rpx;
   font-size: 28rpx;
   color: #4d4d4d;
 }

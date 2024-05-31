@@ -145,6 +145,7 @@ Component({
       })
     },
     showEmojis() {  
+      console.log("aaa")
       this.setData({  
         showEmojis: true  
       })  

@@ -164,7 +164,7 @@
   position: absolute;  
   width: 10px; /* 你可以根据需要调整大小 */  
   height: 10px;  
-  background-color: red;  
+  background-color: #15966b;  
   border-radius: 50%;  
   top: 0; /* 根据图标位置调整 */  
   right: 0; /* 根据图标位置调整 */  
