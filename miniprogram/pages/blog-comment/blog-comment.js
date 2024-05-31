@@ -12,7 +12,8 @@ Page({
     isSupport: false, // 评论是否支持
     isOppose: false, //  评论是否反对
     supportNum: 665,  // 虚拟点赞量
-    opposeNum: 43  // 虚拟踩量
+    opposeNum: 43,  // 虚拟踩量
+  
   },
 
   onLoad: function(options) {
@@ -22,7 +23,9 @@ Page({
     })
     this._loadBlogComment()
   },
-
+  
+  
+  
 //  获取博客内容 + 博客评论列表
   _loadBlogComment() {
     wx.showLoading({
@@ -49,7 +52,7 @@ Page({
       console.log(err)
     })
   },
-
+  
   // 博客评论的点赞和踩逻辑
   support() {
     wx.showToast({

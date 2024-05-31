@@ -1,10 +1,7 @@
 cloudfunctions/*/node_modules/*
-<<<<<<< HEAD
 node_modules/*
 miniprogram/node_modules/*
 miniprogram/miniprogram_npm
 **/package-lock.json
 project.config.json
-=======
 
->>>>>>> parent of e72fc76 (Merge branch 'master' into pr2)

@@ -11,7 +11,7 @@ Page({
     isShowPopup: false, // 是否显示授权底部弹窗，默认false不显示
     blogList: [], // 存放博客页面的博客列表数据
     loveBloglist: [],   // 我喜欢的博客
-   
+
     blogShareImg: [    "https://hbimg.huabanimg.com/0f2e924f9f24b483a6d31ee780208a20306f2a3a11750-rFPrzG_fw658",
     "https://hbimg.huabanimg.com/0b95640080a36c0990a811f0f74efb98cb9b512652fc4-6gkC2J_fw658",
     "https://hbimg.huabanimg.com/05f503e79e197232ac0675f4639cd7459ab4b327bdf37-3HoX31_fw658",
@@ -28,7 +28,6 @@ Page({
     this._loadBlogList()
   },
 
-  
   // 从数据库中载入数据
   _loadBlogList(start = 0) {
     wx.showLoading({

@@ -2,12 +2,20 @@
   <!-- 博客正文 -->
   <view class="blog-card">
     <x-blog-card blog="{{blog}}" blogid="{{blogid}}" />
-  </view>
-  <!-- 博客评论列表 -->
-  <view class="tab">
-    <view class="tab-item">评论列表</view>
+  
+  
+
+
+
   </view>
 
+  <!-- 博客评论列表 -->
+  <view class="tab">
+   
+    <view class="tab-item">评论列表</view>
+    
+  </view>
+  
   <view class="comment-list">
     <block wx:for="{{blogComment}}" wx:key="_id">
       <view class="comment">
@@ -47,5 +55,8 @@
     icon-pinglun="icon-pinglun" 
     icon-fenxiang="icon-fenxiang"
     bind:RefreshComment="_loadBlogComment"
+ 
    />
+   
 </view>
+<x-blog-control  bind:emojiClicked='handemojiClicked' />

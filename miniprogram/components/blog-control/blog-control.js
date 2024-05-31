@@ -52,6 +52,7 @@ Component({
         }
       })
     },
+   
     // 用户点击评论后确认授权成功
     loginSuccess(event){
       console.log('测试授权',event)
@@ -101,7 +102,7 @@ Component({
       })
 
       console.log('blogid',this.properties.blogid)
-
+     
       db.collection('blog-comment').add({
         data:{
           blogid: this.properties.blogid,
@@ -142,6 +143,39 @@ Component({
           image: '../../images/show-fail.png'
         })
       })
+    },
+    showEmojis() {  
+      this.setData({  
+        showEmojis: true  
+      })  
+    },  
+    hideEmojis() {  
+      this.setData({  
+        showEmojis: false  
+      })  
+    },  
+    
+    
+      
+    emojiClicked(e) {  
+       let textareaContent =  this.data.content
+      let emoji = e.currentTarget.dataset.emoji // 获取点击的表情数据
+      
+      textareaContent += emoji // 将点击的表情添加到评论内容中
+     
+      this.setData({
+        content: textareaContent, // 更新评论输入框的内容
+        isShowComment: true
+      });
+    
+      
+     
     }
+    
+      
+      
+       
+     
   }
+
 })

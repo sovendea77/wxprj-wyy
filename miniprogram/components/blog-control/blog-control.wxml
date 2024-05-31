@@ -8,8 +8,26 @@
         <i class="iconfont icon-fenxiang icon"></i>
         <text>分享</text>
   </button>
-  </view>
 </view>
+<view class="ctrl-item emoji" bindtap="showEmojis" >
+    
+        <text >表情</text>
+      </view>
+ 
+   
+  </view>  
+  
+  <view class="emoji-popover" wx:if="{{showEmojis}}">  
+ 
+ <view class="emoji-item" bindtap="emojiClicked" data-emoji="😄">😄</view>  
+ <view class="emoji-item" bindtap="emojiClicked" data-emoji="😢">😢</view>  
+ <view class="emoji-item" bindtap="emojiClicked" data-emoji="😎">😎</view>  
+ <view class="emoji-item" bindtap="emojiClicked" data-emoji="🤔">🤔</view>
+ <view class="emoji-item" bindtap="emojiClicked" data-emoji="❤️">❤️</view>  
+ <view class="popover-close" bindtap="hideEmojis">关闭</view>  
+</view>
+
+
 
 <x-author 
   isShowPopup="{{isShowPopup}}"

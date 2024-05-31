@@ -5,6 +5,8 @@
   url('//at.alicdn.com/t/font_1478754_8f0pyjpu42n.woff?t=1575693322996') format('woff'),
   url('//at.alicdn.com/t/font_1478754_8f0pyjpu42n.ttf?t=1575693322996') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
   url('//at.alicdn.com/t/font_1478754_8f0pyjpu42n.svg?t=1575693322996#iconfont') format('svg'); /* iOS 4.1- */
+ 
+
 }
 
 .iconfont {
@@ -157,4 +159,13 @@
 
 .icon-shu:before {
   content: "\e674";
+}
+.red-dot {  
+  position: absolute;  
+  width: 10px; /* 你可以根据需要调整大小 */  
+  height: 10px;  
+  background-color: red;  
+  border-radius: 50%;  
+  top: 0; /* 根据图标位置调整 */  
+  right: 0; /* 根据图标位置调整 */  
 }
