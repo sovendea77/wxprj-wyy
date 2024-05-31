@@ -16,7 +16,7 @@
 
 .search-btn {
   color: #fff;
-  background: #d81e06;
+  background: #15966b;
   margin-left: 20rpx;
   font-size: 24rpx;
 }
