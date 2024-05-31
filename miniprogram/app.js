@@ -10,12 +10,12 @@ App({
         //   env 参数决定接下来小程序发起的云开发调用（wx.cloud.xxx）会默认请求到哪个云环境的资源
         //   此处请填入环境 ID, 环境 ID 可打开云控制台查看
         //   如不填则使用默认环境（第一个创建的环境）
-        env: '',
+        env: 'cloud1-1grzdgfj46f8978d',
         traceUser: true,
       })
     }
-
-    this.getPlaylist()  // 首次启动自动调用一次歌单爬取
+    
+    this.clearStoredList()
 
     this.getOpenid()   // 获取用户openid
 
@@ -44,6 +44,7 @@ App({
   },
 
   getMusicId(){
+    
     return this.globalData.playingMusicId
   },
 
@@ -55,11 +56,18 @@ App({
   setResourceType(sign){
     this.globalData.isBtnType = sign
   },
+  
+  clearStoredList(){
+
+  },
 
   // 修复：启动小程序自动加载爬取小程序歌曲数据
-  getPlaylist(){
+  getPlaylist(params){
     wx.cloud.callFunction({
-      name: "getPlaylist"
+      name: "getPlaylist",
+      data: {
+          type:params
+      }
     }).then((res) => {
       console.log("新增歌单：",res.result)
     })
@@ -95,7 +103,7 @@ App({
     wx.cloud.callFunction({
       name:"login"
     }).then((res)=>{
-      let openid = res.result.openid
+      let openid = 'res.result.openid'
       let musicOpenid = openid + "loveList"
       let blogOpenid = openid + "blogList"
 

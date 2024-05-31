@@ -1,0 +1,38 @@
+.searchlist-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.iname {
+  font-size: 14px; 
+  font-weight: bold; 
+  margin-bottom: 5px; 
+}
+
+.iintro {
+  display: flex; 
+  flex-direction: row; 
+}
+
+.iartist,
+.ialbum, .ilyric {
+  font-size: 10px;
+  color: #666;
+}
+.ilyric{
+  margin-left: 50rpx;
+}
+
+.iartist {
+  margin-bottom: 2px;
+}
+
+.iview {
+  padding: 9px; 
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 8px;
+  background-color: #fff; 
+  border-radius: 5px; 
+}

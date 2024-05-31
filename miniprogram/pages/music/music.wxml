@@ -1,18 +1,29 @@
-<!-- 音乐模块--首页轮播图 -->
-<swiper 
-    indicator-dots="true"
-    indicator-active-color="#d81e06"
-    indicator-color="#515151"
-    autoplay="true" 
-    interval="2500" 
-    duration="1000">
-  <block wx:for="{{swiperImgUrls}}" wx:key="url">
-    <swiper-item>
-      <image src="{{item.url}}" mode="widthFix" class="swiperImg"></image>
-    </swiper-item>
-  </block>
-</swiper>
+<!-- 搜索栏 -->
+<view class="search-container">
+    <view class="search-header">
+      <view class="search" >
+        <x-combobox selectArray='{{selectArray}}'  bind:select='select' />
+        <x-search bind:search="goSearch" bind:confirmSearch="goSearch"/>
+      </view>
+    </view>
+</view>
 
+<view class="rec">推荐歌单</view>
+<view class="card-theme">
+  <t-swiper
+    display-multiple-items="2"
+    current="{{current}}"
+    autoplay="{{autoplay}}"
+    duration="{{duration}}"
+    interval="{{interval}}"
+    bind:click="onTap"
+    list="{{swiperList}}"
+    image-props="{{ { shape: 'round' } }}"
+    t-class-nav="card-theme-nav"
+  />
+</view>
+
+<view class="high">精品歌单</view>
 <!-- 歌单列表 -->
 <view class="playlist-container">
   <block wx:for="{{playlist}}"  wx:key="_id">

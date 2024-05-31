@@ -69,7 +69,7 @@ exports.main = async (event, context) => {
     let promiseArr = []
 
     if (total > 0) {
-      for (let i = 0; i < queryTimes; i++) {
+      for (let i = 0; i < queryTimes; i++) { 
         let promise = blogComment
           .skip(i * MAX_LIMIT)
           .limit(MAX_LIMIT)
