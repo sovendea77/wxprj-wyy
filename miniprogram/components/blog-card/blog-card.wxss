@@ -58,7 +58,8 @@ page {
 
 .icon-dianzan {
   position: absolute;
-  right: 50rpx;
+  top:10rpx;
+  right: 70rpx;
   font-size: 54rpx;
   opacity: 0.7;
   width: 10rpx;
@@ -101,8 +102,7 @@ page {
   padding: 2rpx 8rpx;
   background: #e7e7e79a;
   color: rgb(22, 92, 53);
-  margin-left: 10rpx;
-  margin-top: 8rpx;
+  margin-top: 18rpx;
 }
 
 .bog-content {

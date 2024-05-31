@@ -31,6 +31,6 @@
 
 .icon-box{
   font-size: 40rpx;
-  color: #d81e06;
+  color: #15966b;
   margin-right: 8rpx;
 }

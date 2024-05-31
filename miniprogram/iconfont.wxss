@@ -160,6 +160,9 @@
 .icon-shu:before {
   content: "\e674";
 }
+.icon-emoji:before {
+  content: "\e60b";
+}
 .red-dot {  
   position: absolute;  
   width: 10px; /* 你可以根据需要调整大小 */  

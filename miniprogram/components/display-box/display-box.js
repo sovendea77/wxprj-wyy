@@ -27,10 +27,6 @@ Component({
     secondBoxIcon: String,
 
     // 展示盒子的背景图
-    displayImg: {
-      type: String,
-      value: "https://hbimg.huabanimg.com/462de3a4c4dc51dd106a6338b7bc2b2df07654076ed1d-atu8rZ_fw658"
-    }
   },
 
   options: {

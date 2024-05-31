@@ -1,7 +1,7 @@
 <view class="blog-background">
 <!-- 我的博客展示盒子 -->
   <x-display-box 
-    firstBoxName="博客数量"
+    firstBoxName="日记数量"
     secondBoxName="收获爱心"
     firstBoxData="{{bloglist.length}}"
     firstBoxIcon="icon-xieboke"
