@@ -106,6 +106,7 @@ Page({
       }
     }).then((res) => {
       let result = JSON.parse(res.result)
+      console.log(result.data[0].url)
       if (result.data[0].url == null) {
         wx.showToast({
           title: '此歌曲为VIP',
@@ -126,7 +127,6 @@ Page({
           backgroundAudioManager.epname = musicInfo.ar.name
         }catch (error){
         }
-
         this.setData({
           isPlaying: true
         })
