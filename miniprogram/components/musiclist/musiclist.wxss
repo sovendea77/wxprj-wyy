@@ -73,5 +73,5 @@
 
 .playing view, .playing text {
   font-family: Arial, Helvetica, sans-serif;
-  color: #d81e06;
+  color: #15966b;
 }

@@ -1,7 +1,7 @@
 <!-- 歌曲界面 -->
 <view class="background-container" bind:tap="lyricShowChange" hidden="{{!isLyricShow}}">
   <image class = "player-background" src="https://img.z4a.net/images/2024/06/01/music-player.png"></image>
-  <image class = "player-note riseAndFade {{ isPlaying ? '' : 'player-pause'}}" src="../../images/music-note.png"></image>
+  <image class = "player-note riseAndFade {{ isPlaying ? '' : 'player-pause'}}" src="https://img.z4a.net/images/2024/06/01/music-note.png"></image>
   <view class="dis-container">
   <view class="player-dis">
     <view class="ellipse">

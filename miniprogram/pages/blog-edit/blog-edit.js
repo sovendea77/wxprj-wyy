@@ -211,7 +211,7 @@ Page({
         title: '温馨提醒',
         content: '没有编辑文字噢，去写点什么吧~',
         confirmText: '记录一下',
-        confirmColor: '#d81e06',
+        confirmColor: '#15966b',
         cancelText: '直接发布',
         cancelColor: '#cbcbcb',
         success: (res) => {
@@ -224,7 +224,7 @@ Page({
                 content: '发布的内容如图片或者视频和发布文案必须有其一，不能都为空',
                 confirmText: '我知道了',
                 showCancel: false,
-                confirmColor: '#d81e06'
+                confirmColor: '#15966b'
               })
               return
             } else {

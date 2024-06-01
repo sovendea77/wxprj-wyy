@@ -104,7 +104,7 @@ Page({
       title: '用户授权才可以发布博客噢 ',
       showCancel: false,
       confirmText: '回去授权',
-      confirmColor: '#d81e06'
+      confirmColor: '#15966b'
     })
   },
 

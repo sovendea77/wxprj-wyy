@@ -10,7 +10,7 @@ Component({
     },
     playingColor:{
       type: String,
-      value: "#d81e06"
+      value: "#15966b"
     },
     indexColor: {
       type: String,

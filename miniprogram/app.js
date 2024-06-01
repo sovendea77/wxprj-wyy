@@ -142,7 +142,7 @@ App({
            title: '更新提示',
            content: '新版本已经准备好，是否重启应用？',
            confirmText: '立即体验',
-           confirmColor: '#d81e06',
+           confirmColor: '#15966b',
            cancelColor: '#a0a0a0',
            success: (res) => {
             if(res.coonfirm){
@@ -152,7 +152,7 @@ App({
                 title: '温馨提示',
                 content: '建议使用新版本,体验更丰富的功能噢 ',
                 confirmText: '体验一下',
-                confirmColor: '#d81e06',
+                confirmColor: '#15966b',
                 cancelText: '下次再说',
                 cancelColor: '#a0a0a0',
                 success: (res) =>{

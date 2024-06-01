@@ -4,9 +4,9 @@
 <!-- 最近播放列表展示 -->
 <x-musiclist
   musiclist="{{musicList}}"
-  indexColor="#d43f8d"
-  musicColor="#cc208e"
-  singerColor="#7028e4"
+  indexColor="#f8e556"
+  musicColor="#f7cf66"
+  singerColor="#fcee92"
  ></x-musiclist>
 
 <!-- 无播放历史提示信息 -->

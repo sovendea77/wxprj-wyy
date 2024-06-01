@@ -12,8 +12,8 @@ Page({
     blogList: [],  // 喜欢的博客
     // 我喜欢的列表背景图
     loveBackground: [
-      "https://hbimg.huabanimg.com/993d028ad6989b2407b01080cf54c759184b824fa5a1a-WbjOas_fw658",
-      "https://hbimg.huabanimg.com/d763efdfc1d79d78c1e254a467e6d59c51e0c8ff2373e-1FAEA0_fw658"
+      "https://img.z4a.net/images/2024/06/01/bloglike-background.png",
+      "https://img.z4a.net/images/2024/06/01/musiclike-background.png"
     ],
     displayImage: [
       "https://hbimg.huabanimg.com/d221d7cca731938b1fa0cfcd244d19a473788acf2b5563-9FWi58_fw658",

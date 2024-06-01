@@ -72,7 +72,7 @@ Component({
         title: '用户授权才可以评论噢 ',
         showCancel: false,
         confirmText: '回去授权',
-        confirmColor: '#d81e06'
+        confirmColor: '#15966b'
       })
     },
 
@@ -90,7 +90,7 @@ Component({
           content: '评论的内容不能为空噢',
           confirmText: '我知道了',
           showCancel: false,
-          confirmColor: '#d81e06'
+          confirmColor: '#15966b'
         })
         return
       }

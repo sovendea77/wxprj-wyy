@@ -10,7 +10,7 @@
   </button>
 </view>
 <view class="ctrl-item emoji" bindtap="showEmojis" >
-      <image class="icon-emoji" src="../../images/search-logo.png" style="width: 45rpx; height: 36rpx; "></image>
+      <image class="icon-emoji" src="https://img.z4a.net/images/2024/06/01/search-logo.png" style="width: 45rpx; height: 36rpx; "></image>
         <text style="">表情</text>
       </view>
  

@@ -40,7 +40,7 @@ page {
 
 .list.change_in {
   color: #fff;
-  background-color: #d81e06;
+  background-color: #15966b;
 }
 
 .list_t {
@@ -69,7 +69,7 @@ page {
   left: 50%;
   top: 50%;
   color: #fff;
-  background-color: #d81e06;
+  background-color: #15966b;
   display: flex;
   justify-content: center;
   align-content: center;

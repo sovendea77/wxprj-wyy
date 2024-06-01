@@ -150,7 +150,7 @@
 
 .love{
   font-size: 70rpx;
-  color: #d81e06;
+  color: #15966b;
   animation-duration: .5s;
   animation-name: loveAnimation;
   animation-fill-mode: forwards;

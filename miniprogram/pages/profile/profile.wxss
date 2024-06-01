@@ -9,7 +9,7 @@ page {
   align-items: center;
   position: relative; 
   box-shadow: 0 0 20rpx rgb(0, 0, 0);
-  background-image: url(https://hbimg.huabanimg.com/ad44374f29e0a2f45748fbcda3f1f761a5c1610e28d0e-3dtmRE_fw658);
+  background-image: url(https://img.z4a.net/images/2024/06/01/pro-background.png);
 }
 /* 我的主页封面 */
 
@@ -167,7 +167,9 @@ page {
   font-size: 28rpx;
   color: #4d4d4d;
 }
-
+.text2 {
+  margin-left: 20rpx;
+}
 /* 二维码弹窗 */
 .qrcode-mask{
   position: fixed;
