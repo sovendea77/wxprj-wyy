@@ -110,7 +110,7 @@ Page({
       if (result.data[0].url == null) {
         wx.showToast({
           title: '此歌曲为VIP',
-          image: "../../images/music-vip.png",
+          image: "../../images/show-miss.png",
           duration: 2500
         })
         setTimeout(() => {
@@ -184,7 +184,7 @@ Page({
     }
   },
 
-  //写博客
+  //写日记
   goBlog(){
     
     wx.navigateTo({

@@ -6,6 +6,6 @@
     "x-blog-control":"/components/blog-control/blog-control",
     "x-global-music": "/components/global-music/global-music"
   },
-  "navigationBarTitleText": "博客广场",
+  "navigationBarTitleText": "日记广场",
   "enablePullDownRefresh": true
 }

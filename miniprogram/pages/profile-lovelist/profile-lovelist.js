@@ -7,9 +7,9 @@ Page({
    */
   data: {
     isShowAnimation: false,  // 是否展示动画
-    switchLove: false,  // 切换当前喜爱的是音乐还是博客，默认false为展示喜欢的音乐
+    switchLove: false,  // 切换当前喜爱的是音乐还日记，默认false为展示喜欢的音乐
     loveList: [],  // 喜欢的音乐列表
-    blogList: [],  // 喜欢的博客
+    blogList: [],  // 喜欢的日记
     // 我喜欢的列表背景图
     loveBackground: [
       "https://img.z4a.net/images/2024/06/01/bloglike-background.png",
@@ -52,7 +52,7 @@ Page({
     })
   },
 
-  // 获取storage中的我的喜爱的博客列表
+  // 获取storage中的我的喜爱列表
   _getMyBloglist(){
     let openid = app.globalData.blogOpenid
     let myBloglist = wx.getStorageSync(openid)

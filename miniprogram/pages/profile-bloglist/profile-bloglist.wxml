@@ -1,5 +1,5 @@
 <view class="blog-background">
-<!-- 我的博客展示盒子 -->
+<!-- 我的日记展示盒子 -->
   <x-display-box 
     firstBoxName="日记数量"
     secondBoxName="收获爱心"
@@ -8,7 +8,7 @@
     secondBoxIcon="icon-dianzan"
   />
 
-<!-- 我的博客展示卡片 -->
+<!-- 我的日记展示卡片 -->
   <scroll-view class="blog-container" scroll-y="true">
     <block wx:for="{{bloglist}}" wx:key="_id">
       <view class="blog-pannel">

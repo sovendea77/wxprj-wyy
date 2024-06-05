@@ -17,7 +17,7 @@ exports.main = async (event, context) => {
     event
   })
 
-  // 获取博客列表（模糊查询）
+  // 获取日记列表（模糊查询）
   app.router('list', async (ctx, next) => {
     let keyword = event.keyword
 
@@ -43,11 +43,11 @@ exports.main = async (event, context) => {
       })
   })
 
-  //  获取博客详细 + 评论列表
+  //  获取日记详细 + 评论列表
   app.router('detail', async (ctx, next) => {
     let blogid = event.blogid
 
-    // 博客详情查询
+    // 日记详情查询
     let blogDetail = await blogData
       .where({
         _id: blogid
@@ -57,7 +57,7 @@ exports.main = async (event, context) => {
         return res.data
       })
 
-    // 博客评论查询
+    // 日记评论查询
     let commentCount = await blogComment.count()
     let total = commentCount.total
     console.log('total', total)
@@ -94,7 +94,7 @@ exports.main = async (event, context) => {
     }
   })
 
-  // 获取我发布的博客列表
+  // 获取我发布日记列表
   const wxContext = cloud.getWXContext() // 获取小程序调用上下文
   app.router('getMyBloglist', async (ctx, next) => {
     ctx.body = await blogData
@@ -109,7 +109,7 @@ exports.main = async (event, context) => {
       })
   })
 
-  // 自增特定博客的loveNum
+  // 自增特定日记的loveNum
   const _ = db.command
   app.router('incLove', async (ctx, next) => {
     let curBlogid = event.currentBlogid
@@ -127,7 +127,7 @@ exports.main = async (event, context) => {
       })
   })
 
-  // 自减特定博客的loveNum
+  // 自减特定日记的loveNum
   app.router('reduceLove', async (ctx, next) => {
     let curBlogid = event.currentBlogid
     ctx.body = await blogData

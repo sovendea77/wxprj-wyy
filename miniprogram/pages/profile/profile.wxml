@@ -34,7 +34,7 @@
         url="/pages/profile-bloglist/profile-bloglist"
     >
       <i class="iconfont icon-xieboke icon-nav"></i>
-      <text class="text">我的博客</text>
+      <text class="text">我的日记</text>
     </navigator>
   </view>
     <view class="nav-item">

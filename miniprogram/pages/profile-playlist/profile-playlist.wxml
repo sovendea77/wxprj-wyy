@@ -5,7 +5,7 @@
 <x-musiclist
   musiclist="{{musicList}}"
   indexColor="#f8e556"
-  musicColor="#f7cf66"
+  musicColor="#ffffff"
   singerColor="#fcee92"
  ></x-musiclist>
 

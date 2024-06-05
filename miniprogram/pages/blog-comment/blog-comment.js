@@ -7,12 +7,12 @@ Page({
    */
   data: {
     blog: {}, // 博文
-    blogid: '', // 博客id
+    blogid: '', //日记id
     blogComment: [], // 博伦
     isSupport: false, // 评论是否支持
     isOppose: false, //  评论是否反对
-    supportNum: 665,  // 虚拟点赞量
-    opposeNum: 43,  // 虚拟踩量
+    supportNum: 0,  // 虚拟点赞量
+    opposeNum: 0,  // 虚拟踩量
   
   },
 
@@ -26,7 +26,7 @@ Page({
   
   
   
-//  获取博客内容 + 博客评论列表
+//  获取日记内容 + 日记评论列表
   _loadBlogComment() {
     wx.showLoading({
       title: '加载中',
@@ -53,7 +53,7 @@ Page({
     })
   },
   
-  // 博客评论的点赞和踩逻辑
+  // 日记评论的点赞和踩逻辑
   support() {
     wx.showToast({
       title: '点赞和踩模式即将上线',

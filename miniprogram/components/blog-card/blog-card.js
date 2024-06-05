@@ -2,11 +2,11 @@ import formatTime from './../../utils/format-time.js'
 
 const app = getApp()
 
-let blogOpenid = "" // 我喜欢的博客openid
+let blogOpenid = "" // 我喜欢的日记openid
 let dataset = {} // 自定义属性值
-let myLoveBloglist = [] // 定义一个临时我的喜爱博客数组列表
-let tempLoveList = [] // 临时存放storage中我喜爱的博客列表
-let loveBlog = {} // 临时存放当前博客信息
+let myLoveBloglist = [] // 定义一个临时我的喜爱日记数组列表
+let tempLoveList = [] // 临时存放storage中我喜爱的日记列表
+let loveBlog = {} // 临时存放当前日记信息
 
 Component({
   /**
@@ -24,9 +24,9 @@ Component({
     playing: false, // 视频是否自动播放
     isLove: false, // 是否喜欢，默认false不喜欢
     _publishTime: '', // 格式化后的时间
-    _loveNum: 0, // 博客初始化爱心数量
-    loveBloglist: [], // 用户喜欢的博客列表
-    blogInfo: {} // 修复Bug的博客信息（进入博客评论页时）
+    _loveNum: 0, // 日记初始化爱心数量
+    loveBloglist: [], // 用户喜欢的日记列表
+    blogInfo: {} // 修复Bug的日记信息（进入日记评论页时）
   },
 
   options: {
@@ -133,7 +133,7 @@ Component({
       })
     },
 
-    // 向storage拿去用户喜爱的博客列表
+    // 向storage拿取用户喜爱日记列表
     _getLoveBloglist() {
       blogOpenid = app.globalData.blogOpenid
       const loveBloglist = wx.getStorageSync(blogOpenid)
@@ -142,7 +142,7 @@ Component({
       })
     },
 
-    // 点击博客卡片的爱心时进行的操作逻辑
+    // 点日记卡片的爱心时进行的操作逻辑
     support() {
       this._getLoveBloglist()
       tempLoveList = this.data.loveBloglist

@@ -1,4 +1,4 @@
-const MAX_LIMIT_NUM = 10  // 博客展示数量
+const MAX_LIMIT_NUM = 10  // 日记展示数量
 
 Page({
 
@@ -23,10 +23,10 @@ Page({
   onLoad: function (options) {
     this.getMyBloglist()
   },
-  // 调用云函数获取我发布的博客
+  // 调用云函数获取我发布的日记
   getMyBloglist() {
     wx.showLoading({
-      title: '博客加载中',
+      title: '日记加载中',
     })
     wx.cloud.callFunction({
       name: "blog",

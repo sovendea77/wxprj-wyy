@@ -7,10 +7,10 @@
     <i class="iconfont icon-jiantou-zuo {{ switchLove ? 'rotate-blog' : 'rotate-music' }}" bind:tap="onSwitch"></i>
   </view>
 
-  <!-- 我的博客展示盒子 -->
+  <!-- 我的日记展示盒子 -->
   <x-display-box 
-    firstBoxName="喜欢音乐" 
-    secondBoxName="喜欢博客" 
+    firstBoxName="收藏音乐" 
+    secondBoxName="点赞日记" 
     firstBoxData="{{ loveList.length }}" 
     secondBoxData="{{ blogList.length }}" 
     firstBoxIcon="icon-yinleku" 
@@ -29,11 +29,11 @@
       wx:if="{{!switchLove}}"
       musiclist="{{loveList}}"
       indexColor="#fb937e"
-      musicColor="#fdbf5c" 
+      musicColor="#ffffff" 
       singerColor="#fed8bf"
     >
     </x-musiclist>
-    <!-- 我喜爱的博客 -->
+    <!-- 我喜爱的日记 -->
   <scroll-view class="blog-container" scroll-y="true"wx:if="{{switchLove}}">
     <block wx:for="{{blogList}}" wx:key="_id">
       <view class="blog-pannel">

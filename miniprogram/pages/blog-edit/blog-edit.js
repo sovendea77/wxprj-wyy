@@ -6,7 +6,7 @@ let fileExtName = '', // 上传图片或视频的格式扩展名
   _item = '', // 上传资源的循环项
   content = '', // 用户输入的内容
   userInfo = {}, // 用户信息（名字和头像） 
-  sendType = [] // 发布博客是检测发布的是图片还是视频
+  sendType = [] // 发日记是检测发布的是图片还是视频
 
 const db = wx.cloud.database() // 初始化数据库
 
@@ -201,7 +201,7 @@ Page({
     }
   },
 
-  // 测试博客（发布规则，内容和图片/视频，不能都为空）
+  // 测试日记（发布规则，内容和图片/视频，不能都为空）
   testSend() {
     // 判断发布的内容是图片还是视频
     sendType = app.getResourceType() ? this.data.videos : this.data.images
@@ -238,7 +238,7 @@ Page({
     }
   },
 
-  // 发布博客
+  // 发布日记
   send(sendType) {
     // 将图片发布在云储存 fileID 云文件ID 每次只上传一个资源
     let promiseArr = [], // 存放Promise实例
@@ -247,7 +247,7 @@ Page({
 
     const publishType = app.getResourceType()
 
-    const loveNum = 0  // 博客喜欢的爱心数
+    const loveNum = 0  //日记喜欢的爱心数
 
     wx.showLoading({
       title: '发布中...',
@@ -312,7 +312,7 @@ Page({
       wx.hideLoading()
       wx.showToast({
         title: '发布失败',
-        image: '../../images/show-fail.png'
+        image: '../../images/show-miss.png'
       })
     })
   }

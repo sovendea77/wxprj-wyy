@@ -9,9 +9,9 @@ Component({
    * 组件的属性列表
    */
   properties: {
-    blog: Object,  // 博客信息
-    blogid: String,   // 评论的博客id
-    blogower: String  // 评论的博客主
+    blog: Object,  //日记信息
+    blogid: String,   // 评论的日记id
+    blogower: String  // 评论的日记主
   },
 
   externalClasses: ['iconfont', 'icon-pinglun','icon-fenxiang'],
@@ -140,7 +140,7 @@ Component({
         wx.hideLoading()
         wx.showToast({
           title:`发布失败: ${err}`,
-          image: '../../images/show-fail.png'
+          image: '../../images/show-miss.png'
         })
       })
     },

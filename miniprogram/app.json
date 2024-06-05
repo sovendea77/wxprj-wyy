@@ -32,13 +32,13 @@
       },
       {
         "pagePath": "pages/blog/blog",
-        "text": "发现",
+        "text": "日记",
         "iconPath": "images/blog.png",
         "selectedIconPath": "images/blog-active.png"
       },
       {
         "pagePath": "pages/profile/profile",
-        "text": "我的",
+        "text": "个人中心",
         "iconPath": "images/me.png",
         "selectedIconPath": "images/me-active.png"
       }

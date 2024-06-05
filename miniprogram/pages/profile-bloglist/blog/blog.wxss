@@ -47,7 +47,7 @@
   box-sizing: border-box;
 }
 
-/* 博客列表没有数据时 */
+/*日记列表没有数据时 */
 
 .blog-empty {
   position: absolute;

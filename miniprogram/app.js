@@ -27,7 +27,7 @@ App({
       isBtnType: 0,  // 图片或者视频
       openid: '',  //  用户的openid （用户使用同一个小程序openid不变）
       musicOpenid: '' ,  // 用户喜欢歌曲列表openid
-      blogOpenid: '',  // 用户喜欢的博客列表openid
+      blogOpenid: '',  // 用户喜欢日记列表openid
       showGlobalMusic: false, // 是否显示全局音乐tab
       showAnimation: true, // 是否进行全局音乐的动画
       globalMusicInfo:{      // 全局音乐需要的信息
@@ -122,7 +122,7 @@ App({
         wx.setStorageSync(musicOpenid,[])
       }
 
-      // 用户我的喜欢博客列表
+      // 用户我的喜欢日记列表
       if (wx.getStorageSync(blogOpenid) == '') {
         wx.setStorageSync(blogOpenid, [])
       }

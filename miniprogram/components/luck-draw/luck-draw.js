@@ -24,14 +24,14 @@ Component({
   data: {
     // 奖品参数信息
     prizeList: [
-      { id: '001', index: 1, imgsrc: 'https://hbimg.huabanimg.com/18b925338313c77ee90c6a0a2f052a7988e10ce515ca7-T4bMZ0_fw658', prizeName: '谢谢参与' },
-      { id: '002', index: 2, imgsrc: 'https://hbimg.huabanimg.com/2acfd641286f1a7e4050ca13e207c1d2fc2cbf5f12ca2-W5O1vm_fw658', prizeName: '金币 x20' },
-      { id: '003', index: 3, imgsrc: 'https://hbimg.huabanimg.com/72138f8f82134a9099eaa02d5d81fa738519716021e4c-idXlQk_fw658', prizeName: '火箭 x1' },
-      { id: '004', index: 4, imgsrc: 'https://hbimg.huabanimg.com/96e0a27d3a6b25dacd7157db6879b63be9e1addd126ac-sMVvOt_fw658', prizeName: '神秘礼盒 x1' },
-      { id: '005', index: 5, imgsrc: 'https://hbimg.huabanimg.com/aa694a1e151f2cb8d8583eee9d1cbf0342b5577b953c-O0MFoR_fw658', prizeName: '水晶血瓶 x1' },
-      { id: '006', index: 6, imgsrc: 'https://hbimg.huabanimg.com/2fe60709c9479b41ec3eef7fff1101f683b4ad89254af-HNdtDR_fw658', prizeName: '金币 x10' },
-      { id: '007', index: 7, imgsrc: 'https://hbimg.huabanimg.com/407d1f6d9aa47e757994d9474dba7257c4c73bd11123a-5juBN1_fw658', prizeName: '水晶钻石 x5' },
-      { id: '008', index: 8, imgsrc: 'https://hbimg.huabanimg.com/513f6f7d9f323e7cc3e252444237a84b52a98890c375-LGfXRi_fw658', prizeName: '水晶盒 x1' },
+      { id: '001', index: 1, imgsrc: 'https://img.z4a.net/images/2024/06/05/prize.png', prizeName: '谢谢参与' },
+      { id: '002', index: 2, imgsrc: 'https://img.z4a.net/images/2024/06/05/prize.png', prizeName: '金币 x20' },
+      { id: '003', index: 3, imgsrc: 'https://img.z4a.net/images/2024/06/05/prize.png', prizeName: '全家桶 x1' },
+      { id: '004', index: 4, imgsrc: 'https://img.z4a.net/images/2024/06/05/prize.png', prizeName: '神秘礼盒 x1' },
+      { id: '005', index: 5, imgsrc: 'https://img.z4a.net/images/2024/06/05/prize.png', prizeName: '青蛙 x1' },
+      { id: '006', index: 6, imgsrc: 'https://img.z4a.net/images/2024/06/05/prize.png', prizeName: '金币 x10' },
+      { id: '007', index: 7, imgsrc: 'https://img.z4a.net/images/2024/06/05/prize.png', prizeName: '耳机 x1' },
+      { id: '008', index: 8, imgsrc: 'https://img.z4a.net/images/2024/06/05/prize.png', prizeName: '牛蛙 x1' },
     ],
 
     drawIndex: null, //抽奖过程KEY

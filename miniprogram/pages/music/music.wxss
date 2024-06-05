@@ -1,5 +1,5 @@
-.view-container{
-  
+page {
+  background: #edf4ed;
 }
 .playlist-container{
   display:  flex;

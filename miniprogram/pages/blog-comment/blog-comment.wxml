@@ -1,5 +1,5 @@
 <scroll-view scroll-y="true" class="container">
-  <!-- 博客正文 -->
+  <!--日记正文 -->
   <view class="blog-card">
     <x-blog-card blog="{{blog}}" blogid="{{blogid}}" />
   
@@ -9,7 +9,7 @@
 
   </view>
 
-  <!-- 博客评论列表 -->
+  <!-- 日记评论列表 -->
   <view class="tab">
    
     <view class="tab-item">评论列表</view>
@@ -38,16 +38,16 @@
 
     <!-- 无评论时提示  -->
     <view class="comment-empty" wx:if="{{!blogComment.length}}">
-      <image class="empty-img" src="../../images/blog-empty.svg"></image>
+      <image class="empty-img" src="../../images/show-miss.png"></image>
       <view class="empty-content">
-        <text class="comment-tip">好凄凉，神马都没有~</text>
+        <text class="comment-tip">这是一片无人之地~</text>
       </view>
     </view>
   </view>
 
 </scroll-view>
 
-<!-- 博客评论页底部控件 -->
+<!--日记评论页底部控件 -->
 <view class="blog-ctrl">
   <x-blog-control 
     blogid="{{blog._id}}" 

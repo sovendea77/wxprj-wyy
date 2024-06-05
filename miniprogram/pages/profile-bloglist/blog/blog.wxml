@@ -1,5 +1,5 @@
 <view class="container">
-    <!-- 博客头部  -->
+    <!--日记头部  -->
     <view class="blog-header">
       <view class="blog-publish" bindtap="onPublish">
         <i class="iconfont icon-fabu"></i>
@@ -15,14 +15,14 @@
 
 <!-- 无数据时提示  -->
   <view class="blog-empty" wx:if="{{!blogList.length}}">
-      <image class="empty-img" src="../../images/blog-empty.svg"></image>
+      <image class="empty-img" src="../../images/show-miss.png"></image>
       <view class="blog-content">
-          <text class="blog-tip">好凄凉，神马都没有~</text>
+          <text class="blog-tip">这是一片无人之地~</text>
           <button class="blog-send" bindtap="onPublish">写点什么</button>
       </view>
   </view>
 
-    <!-- 博客列表 -->
+    <!--日记列表 -->
     <view class="blog-list">
       <block wx:for="{{blogList}}" wx:key="_id">
         <view class="blog-panel">
@@ -43,7 +43,7 @@
       </block>
     </view> 
 
-    <!-- 博客底部授权弹出层  -->
+    <!--日记底部授权弹出层  -->
     <x-author isShowPopup="{{isShowPopup}}"
         bind:loginsuccess="onLoginSuccess"
         bind:loginfail="onLoginFail"
